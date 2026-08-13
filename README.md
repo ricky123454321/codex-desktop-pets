@@ -1,12 +1,15 @@
-# Codex 桌宠 · 小比特 (bitty)
+# Codex 桌宠合集
 
-OpenAI Codex 桌面应用的 8-bit 像素风桌宠：深蓝机身 + 青色屏幕脸的方块小机器人，屏幕会眨眼。
+OpenAI Codex 桌面应用的自定义桌宠，每个桌宠放在独立文件夹里，把对应文件夹复制到桌宠目录即可使用。
 
-![小比特](bitty/preview.html)
+| 桌宠 | 风格 |
+|------|------|
+| [`bitty/`](bitty/) 小比特 | 8-bit 像素风方块机器人：深蓝机身 + 青色屏幕脸，屏幕会眨眼 |
+| [`moonwool/`](moonwool/) 月绒 | 柔和奶油色绒团小兽：头顶星星触角，尾巴像月牙 |
 
 ## 安装
 
-1. 把 `bitty/` 整个文件夹复制到 Codex 桌宠目录：
+1. 把想用的桌宠文件夹（比如 `bitty/`）整个复制到 Codex 桌宠目录：
 
    ```
    C:\Users\xhr\.codex\pets\bitty\
@@ -21,17 +24,18 @@ OpenAI Codex 桌面应用的 8-bit 像素风桌宠：深蓝机身 + 青色屏幕
    selected-avatar-id = "custom:bitty"
    ```
 
+   `custom:` 后面的名字要和桌宠文件夹名一致（`bitty` / `moonwool`）。
+
 3. 重启 Codex 桌面应用（或重新打开头像选择器），桌宠就会切换。
 
-## 文件说明
+## 桌宠包文件说明
 
 | 文件 | 作用 |
 |------|------|
 | `pet.json` | 桌宠包描述：显示名、spritesheet 路径、`spriteVersionNumber: 1`（9 行布局） |
 | `spritesheet.png` | 动画帧图：1536×1872，8 列 × 9 行，每格 192×208 |
-| `make_spritesheet.py` | 用参数化 Python 生成 spritesheet 的脚本（Pillow） |
-| `make_preview.py` | 生成与 App 同帧时长的动画预览 `preview.html` |
-| `preview.html` | 浏览器里的 9 状态动画预览（idle 按 App 的 6 倍慢放） |
+| `make_spritesheet.py` | 用参数化 Python 生成 spritesheet 的脚本（Pillow，仅 bitty 有） |
+| `make_preview.py` / `preview.html` | 浏览器里的 9 状态动画预览（仅 bitty 有） |
 
 ## 状态行布局（与 Codex App 内置一致）
 
@@ -49,7 +53,7 @@ OpenAI Codex 桌面应用的 8-bit 像素风桌宠：深蓝机身 + 青色屏幕
 
 帧时长、帧数、行布局都由 Codex App 硬编码，桌宠包只能改像素内容。
 
-## 重新生成
+## bitty 重新生成
 
 ```bash
 python make_spritesheet.py   # 重新生成 spritesheet.png
