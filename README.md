@@ -35,7 +35,7 @@ OpenAI Codex 桌面应用的自定义桌宠，每个桌宠放在独立文件夹�
 | `pet.json` | 桌宠包描述：显示名、spritesheet 路径、`spriteVersionNumber: 1`（9 行布局） |
 | `spritesheet.png` | 动画帧图：1536×1872，8 列 × 9 行，每格 192×208 |
 | `make_spritesheet.py` | 用参数化 Python 生成 spritesheet 的脚本（Pillow，仅 bitty 有） |
-| `make_preview.py` / `preview.html` | 浏览器里的 9 状态动画预览（仅 bitty 有） |
+| `make_preview.py` / `preview.html` | 浏览器里的 9 状态动画预览（idle 按 App 的 6 倍慢放；bitty 和 moonwool 都有） |
 
 ## 状态行布局（与 Codex App 内置一致）
 
