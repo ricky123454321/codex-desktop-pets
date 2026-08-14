@@ -6,6 +6,7 @@ OpenAI Codex 桌面应用的自定义桌宠，每个桌宠放在独立文件夹�
 |------|------|
 | [`bitty/`](bitty/) 小比特 | 8-bit 像素风方块机器人：深蓝机身 + 青色屏幕脸，屏幕会眨眼 |
 | [`moonwool/`](moonwool/) 月绒 | 柔和奶油色绒团小兽：头顶星星触角，尾巴像月牙 |
+| [`hollowknight/`](hollowknight/) 小骑士 | 8-bit 像素风空洞骑士主角：白面具黑眼洞 + 角 + 手持骨钉 |
 
 ## 安装
 
@@ -34,8 +35,8 @@ OpenAI Codex 桌面应用的自定义桌宠，每个桌宠放在独立文件夹�
 |------|------|
 | `pet.json` | 桌宠包描述：显示名、spritesheet 路径、`spriteVersionNumber: 1`（9 行布局） |
 | `spritesheet.png` | 动画帧图：1536×1872，8 列 × 9 行，每格 192×208 |
-| `make_spritesheet.py` | 用参数化 Python 生成 spritesheet 的脚本（Pillow，仅 bitty 有） |
-| `make_preview.py` / `preview.html` | 浏览器里的 9 状态动画预览（idle 按 App 的 6 倍慢放；bitty 和 moonwool 都有） |
+| `make_spritesheet.py` | 用参数化 Python 生成 spritesheet 的脚本（Pillow，bitty 和 hollowknight 有） |
+| `make_preview.py` / `preview.html` | 浏览器里的 9 状态动画预览（idle 按 App 的 6 倍慢放；全部都有） |
 
 ## 状态行布局（与 Codex App 内置一致）
 
